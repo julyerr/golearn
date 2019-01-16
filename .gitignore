@@ -12,6 +12,11 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/golearn.iml
 
 # Generated files
 .idea/**/contentModel.xml
