@@ -1,0 +1,12 @@
+namespace Capture.Message;
+
+table CaptureMessage{
+    capImage:string;
+    faceImage:string;
+    timestamp:long;
+    track:int;
+    type:string;
+    sequenceNumber:long;
+}
+
+root_type CaptureMessage;

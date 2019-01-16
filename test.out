@@ -1,0 +1,1 @@
+time="2019-01-10T13:58:25+08:00" level=info msg="this should be output to file " func=main.main file="/Users/qiulai/work/go/src/golearn/lib/logrus/logrusOps.go:35"

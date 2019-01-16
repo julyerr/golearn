@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"strings"
 )
 
 func main(){
@@ -12,6 +13,10 @@ func main(){
 		bufStr.WriteString(randomString())
 	}
 	fmt.Println(bufStr.String())
+
+	fmt.Println("replace str---------")
+	str = "1,2"
+	fmt.Println(strings.Replace(str,",","|",-1))
 }
 
 func randomString() string{
