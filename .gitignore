@@ -1,3 +1,6 @@
+/vendor/*
+!/vendor/vendor.json
+
 *.cgo*.go
 *.cgo*.c
 
@@ -74,6 +77,3 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-
-/vendor/
-!/vendor/vendor.json

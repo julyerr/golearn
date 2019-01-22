@@ -8,12 +8,14 @@ import (
 func main(){
 	type Test struct{
 		Name string
-		Passwd string
+		Passwd []byte
 	}
+	//indent show
 	test := &Test{
 		Name:"ql",
-		Passwd:"ql",
+		Passwd: []byte("ql"),
 	}
+	//o1,err := json.Marshal(&test)
 	o1,err := json.Marshal(test)
 	if err != nil{
 		panic(err)
@@ -24,4 +26,19 @@ func main(){
 	}
 	fmt.Println(string(o1))
 	fmt.Println(string(o2))
+
+	//nil show
+	test1 := &Test{
+		Name:"ql",
+	}
+	o3,err := json.Marshal(&test1)
+	if err != nil{
+		panic(err)
+	}
+	var test2 Test
+	err = json.Unmarshal([]byte(o3),&test2)
+	if err != nil{
+		panic(err)
+	}
+	fmt.Print(test2.Passwd == nil)
 }

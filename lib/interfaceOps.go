@@ -7,36 +7,28 @@ type Human interface{
 }
 
 type userip struct{
-
+	ip string
 }
 
 func (u *userip) Say(name string){
 	fmt.Println(name)
 }
 
-//接口对应的值发生了cp
-func testip(u Human) Human{
-	fmt.Printf("%x\n",&u)
-	return u
-}
-
 func main(){
 	fmt.Println()
-	u := &userip{}
-	fmt.Printf("%x\n",&u)
-	uR := testip(u)
-	fmt.Printf("%x\n",&uR)
+	u := &userip{
+		ip: "name",
+	}
+	fmt.Printf("%x\n",&u.ip)
 
-	var human Human
-	human = u
-	fmt.Printf("%x\n",&human)
-	//发生了值复制
-	person := human.(*userip)
-	fmt.Printf("%x\n",&person)
+	//接口只是引用，实际地址值没有发生变化
+	var human1 Human
+	human1 = u
+	fmt.Printf("%x\n",&human1.(*userip).ip)
 
 	BREAK:
-	for i:=0;i<4;i++{
-		switch human.(type) {
+	for i:=0;i<4;i++ {
+		switch human1.(type) {
 		case *userip:
 			fmt.Println("userip type")
 			break BREAK
