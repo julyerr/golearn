@@ -10,6 +10,18 @@ func main(){
 		Name string
 		Passwd []byte
 	}
+	//map -> struct
+	maps := make(map[string]interface{})
+	maps["name"] = "name"
+	maps["passwd"] = []byte("pw")
+	data,err := json.Marshal(maps)
+	if err != nil{
+		panic(err)
+	}
+	var t Test
+	json.Unmarshal(data,&t)
+	fmt.Printf("%+v\n",t)
+
 	//indent show
 	test := &Test{
 		Name:"ql",
@@ -40,5 +52,5 @@ func main(){
 	if err != nil{
 		panic(err)
 	}
-	fmt.Print(test2.Passwd == nil)
+	fmt.Println(test2.Passwd == nil)
 }

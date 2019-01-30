@@ -19,7 +19,8 @@ func main(){
 	if err != nil{
 		panic(err)
 	}
-	fmt.Printf("%+v\n",url1)
+	fmt.Printf("host:%s path:%s rawpath:%s rawquery:%s\n",url1.Host,url1.Path,url1.RawPath,
+		url1.RawQuery)
 	values,err := url.ParseQuery(link)
 	if err != nil{
 		panic(err)
