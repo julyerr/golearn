@@ -1,4 +1,4 @@
-package main
+package _map
 
 import "fmt"
 
@@ -17,5 +17,4 @@ func main(){
 	}else{
 		fmt.Println("no exists")
 	}
-
 }

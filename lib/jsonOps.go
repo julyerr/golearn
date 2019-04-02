@@ -20,6 +20,15 @@ func main(){
 	}
 	var t Test
 	json.Unmarshal(data,&t)
+
+
+
+
+
+
+
+
+	q
 	fmt.Printf("%+v\n",t)
 
 	//indent show

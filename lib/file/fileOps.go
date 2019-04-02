@@ -1,4 +1,4 @@
-package main
+package file
 
 import (
 	"fmt"
@@ -58,7 +58,7 @@ func main(){
 	////文件内容需要flush
 	//oo.Flush()
 
-	dir := "/Users/qiulai/work/go/src/golearn/lib"
+	dir := "/Users/qiulai/work/go/src/github.com/julyerr/golearn/lib"
 	fs,err  := ioutil.ReadDir(dir)
 	if err != nil{
 		panic(err)

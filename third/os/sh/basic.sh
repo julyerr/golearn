@@ -34,6 +34,12 @@ for i in `ls .`;do
     echo $i
 done
 
+#for
+for ((i=1; i<=100; i ++))
+do
+	echo $i
+done
+
 # skill
 
 # signal

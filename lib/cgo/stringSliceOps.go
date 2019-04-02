@@ -52,8 +52,6 @@ func main(){
 	fmt.Printf("%d\n",&C.cArray[0])
 	fmt.Println(C.cArray[0])
 //	针对c频繁访问数组空间的情况，使用C.malloc直接在c中分配不需要跨越访问
-
-
 }
 
 func cArrayToGoArray(cArray unsafe.Pointer,size int) (goarray []int){
