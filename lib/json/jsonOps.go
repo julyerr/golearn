@@ -1,4 +1,4 @@
-package main
+package json
 
 import (
 	"encoding/json"
@@ -21,14 +21,6 @@ func main(){
 	var t Test
 	json.Unmarshal(data,&t)
 
-
-
-
-
-
-
-
-	q
 	fmt.Printf("%+v\n",t)
 
 	//indent show
